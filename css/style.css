@@ -1,0 +1,35 @@
+#board {
+	height: 400px;
+	width: 400px;
+	background:red;
+	margin-top: 100px;
+	float: left;
+}
+
+#btn {
+	margin:185px 0px 0px 167px;
+	background-color: yellow;
+}
+
+#square {
+	float: left;	
+    margin-left: 50px;
+}	    
+		
+#state1,#state2{
+	width: 200px;
+	height: 100px;
+}
+
+#state3,#state4 {
+	width: 200px;
+	height: 100px;
+}
+
+#state1,#state3 {
+	background-color:grey;
+}
+
+#state2,#state4 {
+	background-color:black;
+}

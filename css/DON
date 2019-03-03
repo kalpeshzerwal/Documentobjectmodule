@@ -1,0 +1,59 @@
+
+var s,
+SwitchBoard = {
+
+  settings: {
+   board: document.getElementById("board");
+   chkId: document.getElementById("chkId");
+   text: document.getElementById("text");
+   text1: document.getElementById("text1");
+   btn: document.getElementById("btn");
+  },
+
+  	init: function() {
+    s = this.settings;
+    this.bindUIActions();
+  },
+
+  bindUIActions: function() {
+    s.btn.addEventListener("click", function() {
+      NewsWidget.getMoreArticles(s.numArticles);
+    });
+  },
+
+  getMoreArticles: function(numToGet) {
+    // $.ajax or something
+   // using numToGet as param
+  }
+
+};
+
+
+var colorred=0;
+function buttonclick() {   
+    if(colorred == 0){
+        document.getElementById("board").style.backgroundColor="grey";
+        colorred++;    
+    }
+    else{
+        document.getElementById("board").style.backgroundColor="red";
+        colorred =0;       
+    }
+}
+
+function changeColor() {
+	var check = document.getElementById("chkId").checked;
+	var text1= document.getElementById("text");
+	console.log(check);
+  if (check == true){
+   	document.getElementById("btn").style.backgroundColor="green";
+   	document.getElementById("text1").innerHTML="Switch Is On";
+   	document.getElementById("text1").innerHTML="Hello";
+    text1.style.display = "block";
+  } 
+  else {
+    document.getElementById("btn").style.backgroundColor="yellow";
+    text1.style.display = none;
+  }
+}
+
